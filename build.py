@@ -7,7 +7,7 @@ projects_path = '/var/www/html/projects/'
 react_path = projects_path + 'pakat-react/'
 laravel_path = projects_path + 'pakat/source/'
 
-react_branch_name = 'pm'
+react_branch_name = 'dev'
 laravel_branch_name = 'rebuild-ui'
 
 def changeDir(directory_name):
@@ -20,7 +20,7 @@ def pull(branch_name):
     return os.system('git pull origin {}' . format(branch_name))
 
 def gitMakeBranch(branch_name):
-    return os.system('git co -b {} master' . format(branch_name))
+    return os.system('git co -b {} develop' . format(branch_name))
 
 def gitAdd():
     return os.system('git add .')
